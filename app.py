@@ -72,7 +72,7 @@ def decrypt():
         decipher = CryptoSteganography(pswd)
         secret = decipher.retrieve(filename_d)
         if secret == None:
-            return "Incorrect password or filetype"
+            return render_template('incorrect.html')
         else:
             return render_template('message.html',secret=secret)
 
