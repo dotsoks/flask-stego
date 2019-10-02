@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retrieve hidden message</title>
+</head>
+<body>
+{% include 'header.html' %}<br><br><br><br><br><br>
+<center>
+        <h3> Stego Converter - Retrieve hidden message</h3>
+    </center>
+    <br>
+    <br>
+    <h2>Select a file to upload</h2>
+<br>
+<form method="post" action="/decrypt" enctype="multipart/form-data">
+    <dl>
+		<p> Select file to hide message in :
+			<input type="file" name="file" autocomplete="off" required>
+		</p>
+        <br>
+        <p>
+            Enter your password to decrypt the file :
+            <input type="text" name="password" required>
+        </p>
+    </dl>
+    <p>
+		<input type="submit" value="Decrypt">
+	</p>
+</form>
+</body>
+</html>
