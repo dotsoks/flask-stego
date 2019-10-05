@@ -1,8 +1,10 @@
+# Importing all the libraries
 from flask import Flask,render_template,request,redirect,url_for,session
 from werkzeug.utils  import secure_filename
 import os
 from cryptosteganography import CryptoSteganography
 import time
+import random
 
 # Users
 users = {
@@ -38,6 +40,7 @@ def encrypt():
         return render_template('login.html')
     return render_template('encrypt.html')
 
+# Route for encryption
 @app.route('/convert',methods=['GET','POST'])
 def convert():
     if request.method == 'POST':
@@ -46,11 +49,15 @@ def convert():
         message = request.form['message']
         ps = request.form['password']
         filename = secure_filename(file.filename)
+        num=random.randint(1,999)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         crypto_steganography = CryptoSteganography(ps)
+        # Naming the stego file
+        nm='stego'+str(num)+'.png'
         # Encrypting and hiding a message
-        crypto_steganography.hide(os.path.join(app.config['UPLOAD_FOLDER'], filename),'stego_'+filename, message)
-        return redirect('/')
+        crypto_steganography.hide(os.path.join(app.config['UPLOAD_FOLDER'], filename),nm, message)
+        msg='File encrypted successfully.'
+        return render_template('index.html',msg=msg)
 
 @app.route('/retrieve')
 def retrieve():
