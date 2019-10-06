@@ -20,6 +20,10 @@
 ```angular2
 UPLOAD_FOLDER  = 'Current Project Directory'
 ```
+* Change these database connection parameters
+```
+db = MySQLdb.connect("HOST", "USERNAME", "PASSWORD", "DATABASE")
+```
 * Once we have all dependecies installed, simple run app.py
 * python3 app.py
 * Open your browser with your localhost IP address. Web server should be running on port 5000.
