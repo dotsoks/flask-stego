@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body style="background-color: bisque;">
+{% include 'header.html' %}<br><br><br><br><br><br>
+<center>
+    <h2>
+        Image - Stego Converter
+    </h2>
+
+<form method="POST" action="/register">
+    <input name="username" placeholder="username" required>
+    <input name="email" placeholder="email" required>
+    <input name="password" placeholder="password" type="password" required>
+    <input type="submit" value="Register">
+</form>
+    <br>
+    <br>
+    Please register to access this secure application.
+</center>
+</body>
+</html>
