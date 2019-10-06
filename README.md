@@ -6,10 +6,11 @@
 * Steganography is the art of concealing information within different types of media objects such as images or audio files, in such a way that no one, apart from the sender and intended recipient, suspects the existence of the message. By default steganography is a type of security through obscurity.
 
 # Prerequisites / Dependencies
-* Python3+
+* Python3.6
 * pip3
 * flask
 * cryptosteganography
+* apt-get install python-mysqldb
 
 # Installation
 * Follow these steps to clone and run this application on your local system.
@@ -19,7 +20,6 @@
 ```angular2
 UPLOAD_FOLDER  = 'Current Project Directory'
 ```
-* Users are defined in app.py
 * Once we have all dependecies installed, simple run app.py
 * python3 app.py
 * Open your browser with your localhost IP address. Web server should be running on port 5000.
