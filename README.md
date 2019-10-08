@@ -10,7 +10,7 @@
 * pip3
 * flask
 * cryptosteganography
-* apt-get install python-mysqldb
+* apt-get install python3-mysqldb
 
 # Installation
 * Follow these steps to clone and run this application on your local system.
