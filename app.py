@@ -9,7 +9,7 @@ import random
 import MySQLdb
 
 #Uploaded files destination
-UPLOAD_FOLDER =r'C:\Users\Steve Power\PycharmProjects\flask-stego'
+UPLOAD_FOLDER =r'C:\Users\UserName\PycharmProjects\flask-stego'
 app = Flask(__name__)
 
 # This configuration is for allowing all media types to be upload using flask-upload module
