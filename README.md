@@ -1,4 +1,4 @@
-# Flask-stego - Python based steganography tool
+# Image Steganography using Flask Framework - Python based steganography tool
 
 * Supports Python3.6
 * Web framework used - Flask
